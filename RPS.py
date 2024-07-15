@@ -9,11 +9,17 @@ while (1):
     print("cpu " + str(cpu) + " | usr " + str(usr))
     
     # User Plays
-    usrin = ""
-    print("User chooses ", sep="")
+    userin = ""
+    usrchoice = 0
+    print("User chooses ", end="")
     input(userin)
-    userin = userin.toupper()
-    if (userin == )
+    userin = userin.upper()
+    if (userin == "rock"):
+        userchoice = 0
+    elif (userin == "paper"):
+        userchoice = 1
+    elif (userin == "scissor"):
+        userchoice = 2
     
     # Computer Plays
     cpurand = random.randint(0, 2)
@@ -25,5 +31,9 @@ while (1):
         print ('Computer choose scissors')
         
     # Scoring
-    
-    print(cpurand)
+    condition = 0 # 0 is draw 1 is user win 2 is cpu win
+    if (usrchoice == cpurand):
+        condition = 0
+        print('Draw')
+    if ((userchoice == 0 && cpurand == 2) || (userchoice = 1 && cpurand == 0) || (userchoice))
+        
