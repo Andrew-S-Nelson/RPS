@@ -31,9 +31,11 @@ while (1):
         print ('Computer choose scissors')
         
     # Scoring
-    condition = 0 # 0 is draw 1 is user win 2 is cpu win
     if (usrchoice == cpurand):
-        condition = 0
         print('Draw')
-    if ((userchoice == 0 && cpurand == 2) || (userchoice = 1 && cpurand == 0) || (userchoice))
-        
+    if ((userchoice == 0 and cpurand == 2) or (userchoice = 1 and cpurand == 0) or (userchoice == 2 and cpurand == 1))
+        print('User Wins!')
+        usr += 1
+    if ((cpurand == 0 and userchoice == 2) or (cpurand = 1 and userchoice == 0) or (cpurand == 2 and userchoice == 1))
+        print('Cpu Wins! :(')
+        cpu += 1
