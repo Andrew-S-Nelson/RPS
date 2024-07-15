@@ -10,10 +10,10 @@ while (1):
     
     # User Plays
     userin = ""
-    usrchoice = 0
+    userchoice = 0
     print("User chooses ", end="")
     input(userin)
-    userin = userin.upper()
+    userin = userin.lower()
     if (userin == "rock"):
         userchoice = 0
     elif (userin == "paper"):
@@ -31,11 +31,11 @@ while (1):
         print ('Computer choose scissors')
         
     # Scoring
-    if (usrchoice == cpurand):
+    if (userchoice == cpurand):
         print('Draw')
-    if ((userchoice == 0 and cpurand == 2) or (userchoice = 1 and cpurand == 0) or (userchoice == 2 and cpurand == 1))
+    if ((userchoice == 0 and cpurand == 2) or (userchoice == 1 and cpurand == 0) or (userchoice == 2 and cpurand == 1)):
         print('User Wins!')
         usr += 1
-    if ((cpurand == 0 and userchoice == 2) or (cpurand = 1 and userchoice == 0) or (cpurand == 2 and userchoice == 1))
+    if ((cpurand == 0 and userchoice == 2) or (cpurand == 1 and userchoice == 0) or (cpurand == 2 and userchoice == 1)):
         print('Cpu Wins! :(')
         cpu += 1
