@@ -33,17 +33,17 @@ do
     # computer choice
     cpuchoice=$(date +%N)
     cpuchoice=$[ ${cpuchoice:8} % 3 ]
-    echo $cpuchoice
-        
+    echo "cpu choose ${options[$cpuchoice]}"
+    
     # scoring
     if [ $cpuchoice == $userchoice ];
     then
         echo 'game is draw'
     
     # user chooses rock
-    elif [ userchoice == '0' ]; 
+    elif [ $userchoice -eq 0 ]; 
     then
-        if [ cpuchoice == '1' ]; # cpu chooses paper
+        if [ $cpuchoice -eq 1 ]; # cpu chooses paper
         then
             echo 'cpu won'
             cpu=$[ $cpu + 1 ];
@@ -53,9 +53,9 @@ do
         fi
         
     # user chooses paper
-    elif [ userchoice == '1' ] 
+    elif [ $userchoice -eq 1 ] 
     then
-        if [ cpuchoice == '2' ] # cpu chooses scissors
+        if [ $cpuchoice -eq 2 ] # cpu chooses scissors
         then
             echo 'cpu won'
             cpu=$[ $cpu + 1 ]
@@ -65,9 +65,9 @@ do
         fi
         
     # user chooses scissors
-    elif [ userchoice == '2' ] 
+    elif [ $userchoice -eq 2 ] 
     then
-        if [ cpuchoice == '0' ] # cpu chooses rock
+        if [ $cpuchoice -eq 0 ] # cpu chooses rock
         then
             echo 'cpu won'
             cpu=$[ $cpu + 1 ]
