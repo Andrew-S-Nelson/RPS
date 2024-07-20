@@ -16,13 +16,13 @@ do
     userchoice=0
     
     # userin to numeric choice
-    if [ $userin == 'rock' ];
+    if [ $userin == 'rock' ]
     then
         userchoice=0
-    elif [ $userin == 'paper' ];
+    elif [ $userin == 'paper' ]
     then
         userchoice=1
-    elif [ $userin == 'scissors' ];
+    elif [ $userin == 'scissors' ]
     then
         userchoice=2
     else
@@ -36,20 +36,20 @@ do
     echo "cpu choose ${options[$cpuchoice]}"
     
     # scoring
-    if [ $cpuchoice == $userchoice ];
+    if [ $cpuchoice == $userchoice ]
     then
         echo 'game is draw'
     
     # user chooses rock
-    elif [ $userchoice -eq 0 ]; 
+    elif [ $userchoice -eq 0 ]
     then
-        if [ $cpuchoice -eq 1 ]; # cpu chooses paper
+        if [ $cpuchoice -eq 1 ] # cpu chooses paper
         then
             echo 'cpu won'
-            cpu=$[ $cpu + 1 ];
+            cpu=$[ $cpu + 1 ]
         else                 # cpu chooses scissors
             echo 'user won'
-            usr=$[ $usr + 1 ];
+            usr=$[ $usr + 1 ]
         fi
         
     # user chooses paper
